@@ -1,0 +1,29 @@
+[
+  {
+    "id": "grandescoisas",
+    "slug": "grandescoisas",
+    "title": "Grandes Coisas - Flâmula",
+    "category": "flamulas",
+    "price": 49.90,
+    "description": "Flâmula decorativa 'Grandes Coisas' com acabamento premium.",
+    "images": ["grandescoisas-400.jpg", "grandescoisas-800.jpg", "grandescoisas-1600.jpg"]
+  },
+  {
+    "id": "bag-bahia",
+    "slug": "bag-bahia",
+    "title": "Bag Bahia - Ecobag",
+    "category": "ecobags",
+    "price": 39.90,
+    "description": "Ecobag com estampa exclusiva de Salvador.",
+    "images": ["bag-bahia-400.jpg", "bag-bahia-800.jpg", "bag-bahia-1600.jpg"]
+  },
+  {
+    "id": "qua-amou",
+    "slug": "qua-amou",
+    "title": "Quadro Amou - Quadro",
+    "category": "quadros",
+    "price": 129.90,
+    "description": "Quadro 'Amou' em impressão fine art.",
+    "images": ["qua-amou-400.jpg", "qua-amou-800.jpg", "qua-amou-1600.jpg"]
+  }
+]
