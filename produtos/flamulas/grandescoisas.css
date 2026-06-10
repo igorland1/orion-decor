@@ -1,0 +1,318 @@
+/* ===== HEADER SIMPLES ===== */
+.product-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 4rem;
+  background: rgba(245, 237, 224, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sand);
+}
+
+.header-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brown-dark);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.header-logo span {
+  color: var(--brown-light);
+  font-style: italic;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 4rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  background: var(--off-white);
+  border-bottom: 1px solid var(--sand);
+}
+
+.breadcrumb a {
+  color: var(--brown-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover { color: var(--brown-dark); }
+
+.breadcrumb span:last-child { color: var(--brown-dark); }
+
+/* ===== PRODUCT PAGE LAYOUT ===== */
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 4rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== GALLERY GRID ===== */
+.product-gallery {
+  position: sticky;
+  top: 5rem;
+  align-self: start;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 6px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: var(--sand);
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* Primeira foto ocupa as duas colunas (destaque) */
+.gallery-item--main {
+  grid-column: 1 / 3;
+  aspect-ratio: 4 / 3;
+}
+
+/* ===== PRODUCT INFO ===== */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.product-info__eyebrow {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 0.7rem;
+}
+
+.product-info__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--brown-dark);
+  margin-bottom: 1.2rem;
+}
+
+.product-info__price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.product-info__price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--brown-warm);
+}
+
+.product-info__badge {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  background: var(--brown-dark);
+  color: var(--caramel);
+}
+
+.product-info__divider {
+  height: 1px;
+  background: var(--sand);
+  margin-bottom: 1.8rem;
+}
+
+/* Descrição */
+.product-info__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2.2rem;
+}
+
+.product-info__description p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-mid);
+}
+
+/* Sections (lista e tabela) */
+.product-info__section {
+  margin-bottom: 2rem;
+}
+
+.product-info__section-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--sand);
+}
+
+/* Lista de detalhes */
+.product-detail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.product-detail-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--cream);
+  gap: 1rem;
+}
+
+.product-detail-list li span:first-child {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.product-detail-list li span:last-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: right;
+}
+
+/* Tabela de especificações */
+.product-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-spec-table tr:nth-child(even) {
+  background: var(--cream);
+}
+
+.product-spec-table th,
+.product-spec-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.product-spec-table th {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  white-space: nowrap;
+  width: 42%;
+}
+
+.product-spec-table td {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* CTA */
+.product-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  padding: 1.1rem 2rem;
+  background: #25d366;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.product-cta svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.product-cta:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+.product-info__note {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--brown-light);
+  text-align: center;
+  margin-top: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .product-header { padding: 1rem 1.5rem; }
+  .breadcrumb     { padding: 0.8rem 1.5rem; }
+
+  .product-page {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .product-gallery { position: static; }
+
+  .gallery-item--main { aspect-ratio: 3 / 2; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { gap: 4px; }
+  .product-info__title { font-size: 1.8rem; }
+  .product-spec-table th { width: 38%; }
+}
